@@ -26,9 +26,10 @@ html {
     width: 250px;
     height: 50px;
     border-radius: 25px;
-    font-size: 30px;
+    font-size: 20px;
     border-style: none;
     margin-top: 30px;
+    position: relative;
     /* margin-left: 50px; */
   }
   
@@ -89,4 +90,15 @@ html {
     font-size: 16px;
     text-align: center;
   }
-  
+  .resultParas {
+    /* Your existing CSS styles */
+    position: relative; /* Ensure relative positioning for absolute positioning of button */
+}
+
+.resultParas button {
+    /* Your existing CSS styles */
+    position: absolute; /* Position the button relative to its container */
+    bottom: -60px; /* Adjust the bottom spacing as needed */
+    left: 50%; /* Position the button horizontally in the middle */
+    transform: translateX(-50%); /* Adjust horizontal positioning */
+}

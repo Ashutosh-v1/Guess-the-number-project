@@ -33,8 +33,9 @@ function validateGuess(guess){
         prevGuess.push(guess)
         if(numGuess === 11){
             displayGuess(guess)
-            displayMessage(`Game Over, ranodm number was ${randomNumber}`)
+            displayMessage(`Game Over, random number was ${randomNumber}`)
             endGame()
+            newGame()
         } else {
             displayGuess(guess)
             checkGuess(guess)
@@ -46,6 +47,7 @@ function checkGuess(guess){
     if(guess === randomNumber){
         displayMessage(`You guessed it right`)
         endGame()
+        newGame()
     } else if(guess < randomNumber){
         displayMessage(`The number is too low`)
     } else if(guess > randomNumber){
@@ -68,7 +70,7 @@ function endGame() {
     userInput.value = ''
     userInput.setAttribute('disabled', '')
     p.classList.add('button')
-    p.innerHTML = `<h2 id="newGame"> Start new Game </h2>`;
+    p.innerHTML = `<h2 id="newGame"></h2>`;
     startOver.appendChild(p)
     playGame = false
     newGame();
